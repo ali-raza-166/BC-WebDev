@@ -1,0 +1,303 @@
+
+*{
+    box-sizing: border-box;
+}
+:root{
+    --nav-clr: hsl(182, 53%, 12%);
+    --button-clr:  hsl(182, 53%, 40%);
+}
+body{
+    margin: 0;
+    font-family: Cambria, serif;
+    color: #333;
+}
+.full-screen-header{
+    height: 100vh;
+    background-image: url(img/developer2.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: -20%;
+    color: white;
+    position: relative;
+}
+
+.nav{
+    background: var(--nav-clr);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem;
+}
+.nav .logo{
+    width: 80px;
+    height: 50px;
+}
+.nav-list{
+    list-style: none;
+    display: flex;
+}
+.nav-list a{
+    margin-left: 2rem;
+    text-decoration: none;
+    color: white;
+    transition: 500ms;
+    
+}
+.nav-list a:hover{
+    color: #ddd;
+}
+.full-screen-content{
+    padding-top: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.title{
+    font-size: 3rem;
+    margin: 0;
+}
+.sub-title{
+    font-size: 1.5rem;
+    margin-top: .6rem;
+    margin-bottom: .6rem;
+}
+.btn{
+    background-color: var(--button-clr);
+    padding: .25em .75em;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid var(--nav-clr);
+    border-radius: 10000px;
+    font-size: inherit;
+    transition: 500ms;
+}
+.btn:hover{
+    background-color: var(--nav-clr);
+    border: 1px solid hsl(182, 53%, 70%);
+    box-shadow: 0 0 5px  hsl(182, 53%, 20%);
+}
+.btn-grow:hover{
+    transform: scale(1.05);
+    box-shadow: 0 2px 5px 2px black;
+}
+.down-arrow{
+    width: 30px;
+    position: absolute;
+    bottom: 1rem;
+    left: 50vw;
+    animation: down-arrow-bounce 1s alternate infinite linear;
+} 
+.section{
+    padding: 2rem;
+}
+.section-title{
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+}
+.curriculum-grid{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 450px));
+    justify-content: center;
+    row-gap: 10px;
+    column-gap: 50px;
+}
+.curriculum-grid-item{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.curriculum-grid-item:hover{
+    background-color: hsl(182, 53%, 80%);
+
+}
+.curriculum-grid-item img{
+    width: 50px;
+    margin-right: 1rem;
+}
+.plan-title{
+    margin-top: 0;
+    color: white;
+}
+.pricing-card-container{
+    display: flex;
+    justify-content: center;
+}
+.section-accent{
+    margin-top: 20px;
+    background-color: hsl(182, 53%, 40%);
+}
+.pricing-card{
+    padding: 1rem;
+    background-color: hsl(182, 53%, 95%);
+    border: 1px solid black;
+    border-radius: .3em;
+    margin: 1rem 0; /* Apply margins to all the pricing cards on top/bottom, so that removing this margin for middle card will amke it stand out more */
+    transition: transform 300ms;
+}
+.pricing-card:hover{
+    transform: scale(1.03);
+}
+.pricing-card.accent{
+    background-color: white;
+    margin: 0; /* will make this middle card standout more */
+    z-index: 1; /* so that while hovering this accent card, it will still remain on top of the rest two */
+}
+.pricing-card:first-child{ /* select pricing card which is the first to appear in flex box container */
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+}
+.pricing-card:last-child{ /* select pricing card which is the last to appear in flex box container */
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: none;
+}
+.pricing-card-header{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.plan-name{
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+.plan-price{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.plan-price::after{
+    content: '/mo';
+    font-size: 1rem;
+    color: #777;
+}
+.feature{
+    margin-bottom: .5rem; /* add some space between each feature */
+}
+.feature.inactive{
+    text-decoration: line-through;
+    color: #777;
+}
+/* .section-accent-free{
+    margin-top: 20px;
+    background-color: hsl(182, 53%, 40%);
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.free-title{
+    margin: 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+.free-sub-title{
+    max-width: 300px;
+    text-align: justify;
+} */
+.form{
+    max-width: 700px;
+    margin: 0 auto;
+}
+.form label{
+    color: black;
+    font-weight: bold;
+}
+.form input, .form textarea{
+    width: 100%;
+    margin-bottom: .5rem;
+    outline: none;
+    border: 1.5px solid #666;
+    padding: .5em;
+    border-radius: .25em; 
+    color: inherit;
+    font-family: inherit;
+    transition: 500ms;
+}
+.form textarea{
+    resize: vertical;
+    min-height: 75px;
+    max-height: 200px;
+}
+.form input:focus, .form textarea:focus{
+    border-color: hsl(182, 53%, 40%);
+}
+.btn-send{
+    text-align: end;
+}
+.btn-send button{
+    border-radius: .3rem;
+}
+
+@keyframes down-arrow-bounce{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-15px);
+    }
+}
+@media (max-width:600px){
+    .title{
+        font-size: 2rem;
+        margin: 0;
+    }
+    .sub-title{
+        font-size: 1rem;
+        margin-top: .6rem;
+        margin-bottom: .6rem;
+    }
+    .curriculum-grid{
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+    .pricing-card-container{
+        flex-wrap: wrap;
+        
+    }
+    .pricing-card{
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        margin: 0 1rem;
+    }
+    .pricing-card:first-child{
+        border-radius: .3em;
+        border-right: 1px solid black;
+        border-bottom: none;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .pricing-card:last-child{
+        border-radius: .3em;
+        border-left: 1px solid black;
+        border-top: none;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+}
+
+@media (max-width:450px)
+{
+    .nav{
+        flex-direction: column;
+    }
+    .nav-list{
+        margin: 0;
+        padding: 0;
+        margin-right: 10px;
+    }
+    .nav-list li{
+        margin-bottom: 10px;
+    }
+    .logo{
+        margin-bottom: 10px;
+    }
+    .down-arrow{
+        width: 20px;
+    } 
+    
+}
