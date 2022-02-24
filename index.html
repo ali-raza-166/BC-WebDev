@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/89a23184cd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <title>Bootcamp</title>
+</head>
+
+<body>
+    <header class="full-screen-header">
+        
+        <nav class="nav">
+            <!-- <img class="logo" src="img/logo.png" href="index.html" alt="WebDev Logo"> -->
+            <!-- <input type="image" class="logo" href="contact.html"  src="img/logo.png " alt="Submit Form" /> -->
+            <div class="logo">
+                <a href="contact.html">
+                    <img  class="logo-image"   src="img/logo.png" alt="DevByte Logo">
+                </a>
+            </div>
+            
+            <ul class="nav-list">
+                <li><a href="#">Curriculum</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a class="btn" href="contact.html">Contact</a></li>
+            </ul>
+            <a class="toggle" href="#" style="font-size:20px; padding: 0; margin: 0; color: white; ">
+                <i class="fas fa-bars"></i>
+            </a>
+            
+        </nav>
+
+        <div class="full-screen-content">
+            <h1 class="title">WebDev Bootcamp</h1>
+            <span class="sub-title">From No Stack to Full Stack</span>
+            <a class="btn btn-grow" href="#">Learn More</a>
+        </div>
+        <img class="down-arrow" src="img/down-arrow.svg" alt="Scroll Down Icone">
+    </header>
+    <main>
+        <section class="section">
+            <h1 class="section-title">Curriculum</h1>
+            <div class="curriculum-grid">
+                <div class="curriculum-grid-item">
+                    <img src="img/html5.svg" alt="HTML5 icon">
+                    <p>Start by learning basics of HTML and CSS to build your first website</p>
+                </div>
+                <div class="curriculum-grid-item">
+                    <img src="img/node-js.svg" alt="JS icon">
+                    <p>Build interactive web applications with the world's most poweful bacjend</p>
+                </div>
+                <div class="curriculum-grid-item">
+                    <img src="img/visual-studio.svg" alt="VS code icon">
+                    <p>Use the latest technology for editing and creating amazing web applications</p>
+                </div>
+                <div class="curriculum-grid-item">
+                    <img src="img/database.svg" alt="Database icon">
+                    <p>Manage the application data by learning SQL and NoSQL database Architexture</p>
+                </div>
+                <div class="curriculum-grid-item">
+                    <img src="img/adobe-xd.svg" alt="Adobe-XD icon">
+                    <p>Create stunning designs by using modern design tools like Figma, Sketch, and Adobe XD</p>
+                </div>
+                <div class="curriculum-grid-item">
+                    <img src="img/react.svg" alt="ReactJS icon">
+                    <p>Use the most popular frontend framework to create modern PWAs</p>
+                </div>
+            </div>
+        </section>
+        <section class="section section-accent">
+            <h2 class="section-title plan-title">Our Plans</h2>
+            <div class="pricing-card-container">
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <div class="plan-name">Basic</div>
+                        <div class="plan-price">$10</div>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature">4 Videos Per Month</div>
+                        <div class="feature">1 Project Based Videp Per Month</div>
+                        <div class="feature inactive">Weekly Live Streams</div>
+                        <div class="feature inactive">24/7 Email Support</div>
+                        <div class="feature inactive">24/7 Phone Support</div>
+                        <div class="feature inactive">1 Project Code Review Per Month</div>
+                    </div>
+                </div>
+                <div class="pricing-card accent">
+                    <div class="pricing-card-header">
+                        <div class="plan-name">Preferred</div>
+                        <div class="plan-price">$30</div>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature">4 Videos Per Month</div>
+                        <div class="feature">1 Project Based Videp Per Month</div>
+                        <div class="feature">Weekly Live Streams</div>
+                        <div class="feature">24/7 Email Support</div>
+                        <div class="feature inactive">24/7 Phone Support</div>
+                        <div class="feature inactive">1 Project Code Review Per Month</div>
+                    </div>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <div class="plan-name">Pro</div>
+                        <div class="plan-price">$50</div>
+                    </div>
+                    <div class="plan-features">
+                        <div class="feature">4 Videos Per Month</div>
+                        <div class="feature">1 Project Based Videp Per Month</div>
+                        <div class="feature">Weekly Live Streams</div>
+                        <div class="feature">24/7 Email Support</div>
+                        <div class="feature">24/7 Phone Support</div>
+                        <div class="feature">1 Project Code Review Per Month</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--
+        <section class="section section-accent-free">
+            <h2 class="free-title">Free</h2>
+            <p class="free-sub-title">That's right. All of this amazing content is available completely for free on YouTube !!!</p>
+        </section> 
+        -->
+        <section class="section">
+            <h2 class="section-title">Contact</h2>
+            <form class="form">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+                <label for="email">Email</label>
+                <input type="text" name="emal" id="email">
+                <label for="message">Message</label>
+                <textarea name="message" id="message"></textarea>
+                <div class="btn-send">
+                    <button class="btn" type="submit">Send</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
